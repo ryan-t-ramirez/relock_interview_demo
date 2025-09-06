@@ -1,1 +1,18 @@
-{}
+{
+    "Relock_demo": {
+        "projectName": "Relock_demo",
+        "description": "A Demo",
+        "type": "community",
+        "author": "ryan-t-ramirez",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/ryan-t-ramirez/relock_interview_demo",
+        "githubUri": "https://github.com/ryan-t-ramirez/relock_interview_demo",
+        "license": "apache-2.0",
+        "lastUpdated": "1757194023577",
+        "tags": [
+            "authentication"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
+    }
+}
