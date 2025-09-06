@@ -13,6 +13,9 @@
             "authentication"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "com.me.adaptiveAuthentication": {}
+        },
+        "name": "Relock_demo"
     }
 }
