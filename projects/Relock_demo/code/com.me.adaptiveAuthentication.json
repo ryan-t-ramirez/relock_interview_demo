@@ -5,8 +5,8 @@
 			"type": "startNode",
 			"sourcePosition": "right",
 			"position": {
-				"x": 30,
-				"y": 30
+				"x": 28,
+				"y": 33
 			},
 			"deletable": false,
 			"data": {
@@ -34,13 +34,69 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+			"type": "rrfNode",
+			"position": {
+				"x": 278,
+				"y": 33
+			},
+			"data": {
+				"id": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+				"type": "rrfNode",
+				"position": {
+					"x": 278,
+					"y": 33
+				},
+				"previousNodeId": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "auth/userLogin.html",
+					"asssignedVariableName": "flow_userLogin",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Prompt for Username",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
-	"edges": [],
+	"edges": [
+		{
+			"id": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f-rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+			"type": "default",
+			"source": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
+			"target": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f"
+		}
+	],
 	"viewport": {
-		"x": 173,
-		"y": 19,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
