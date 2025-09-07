@@ -70,6 +70,48 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c",
+			"type": "whenNode",
+			"position": {
+				"x": 528,
+				"y": 91
+			},
+			"data": {
+				"id": "whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c",
+				"type": "whenNode",
+				"position": {
+					"x": 528,
+					"y": 91
+				},
+				"previousNodeId": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "flow_userLogin",
+							"operator": "is",
+							"dataValue": "highRisk",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Checks if the user login is high risk. "
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
 			"selected": true
 		}
 	],
@@ -92,6 +134,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f"
+		},
+		{
+			"id": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d-whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c",
+			"type": "default",
+			"source": "rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d",
+			"target": "whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d"
 		}
 	],
 	"viewport": {
