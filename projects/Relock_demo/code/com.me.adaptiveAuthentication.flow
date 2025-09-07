@@ -1,2 +1,3 @@
 Flow com.me.adaptiveAuthentication
      Basepath ""
+flow_userLogin = RRF "auth/userLogin.html" 
