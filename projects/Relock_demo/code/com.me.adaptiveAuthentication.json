@@ -1,36 +1,46 @@
 {
-  "nodes": [
-    {
-      "id": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
-      "type": "startNode",
-      "sourcePosition": "right",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "deletable": false,
-      "data": {
-        "id": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
-        "type": "startNode",
-        "position": {
-          "x": 30,
-          "y": 40
-        },
-        "agamaData": {
-          "isTopLevelFlow": true,
-          "basepath": "",
-          "configParams": "{}",
-          "nodeIcon": "material-symbols:line-start-square",
-          "timeout": "",
-          "inputs": "",
-          "configs": "",
-          "flowname": "com.me.adaptiveAuthentication",
-          "displayName": "Adaptive Authentication",
-          "creationDate": "06/09/2025",
-          "hasComment": true,
-          "comment": ""
-        }
-      }
-    }
-  ]
+	"nodes": [
+		{
+			"id": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
+			"type": "startNode",
+			"sourcePosition": "right",
+			"position": {
+				"x": 30,
+				"y": 30
+			},
+			"deletable": false,
+			"data": {
+				"id": "startNode-ac2ce70e-771a-43c7-8425-2ea019e0190f",
+				"type": "startNode",
+				"position": {
+					"x": 30,
+					"y": 40
+				},
+				"agamaData": {
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "",
+					"configs": "",
+					"flowname": "com.me.adaptiveAuthentication",
+					"displayName": "Adaptive Authentication",
+					"creationDate": "06/09/2025",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			}
+		}
+	],
+	"edges": [],
+	"viewport": {
+		"x": 300.81472712727805,
+		"y": 200.74629038159708,
+		"zoom": 0.7977452398090353
+	}
 }
