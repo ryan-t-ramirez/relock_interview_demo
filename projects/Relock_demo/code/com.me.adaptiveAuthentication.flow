@@ -1,15 +1,5 @@
 Flow com.me.adaptiveAuthentication
      Basepath ""
 flow_userLogin = RRF "auth/userLogin.html" 
-// Checks if the user login is high risk. 
-When flow_userLogin is highRisk
-     flow_password = RRF "auth/password.html" 
-     flow_otp = RRF "auth/otp.html" 
-     flow_authResult = Call com.Relock.auth.Authenticator#verifyPasswordAndOTP flow_userLogin flow_password flow_otp
-     it_sfmyf = {success:true, data: { userId: flow_userLogin }}
-     Finish it_sfmyf
-Otherwise
-     flow_password = RRF "auth/password.html" 
-     flow_authResult = Call com.Relock.auth.Authenticator#verifyPassword flow_userLogin flow_password
-     it_xraas = {success:true, data: { userId: flow_userLogin }}
-     Finish it_xraas
+flow_riskLevel = Call com.Relock.risk.RiskChecker#analyze flow_userLogin
+When flow_riskLevel is High
