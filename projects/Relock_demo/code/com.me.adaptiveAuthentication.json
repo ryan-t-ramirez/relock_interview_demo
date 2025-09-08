@@ -360,7 +360,7 @@
 					"descColor": "",
 					"displayName": "Assess Login Risk",
 					"hasComment": true,
-					"comment": "// --- Risk Assessment ---\n\nFUNCTION analyze(username):\n\n  // 1. Get data from the user's request\n  ip_address = get_request_ip()\n  device_fingerprint = get_device_fingerprint()\n\n  // 2. Check for high-risk signals\n  IF is_ip_on_blacklist(ip_address) \nTHEN\n    RETURN \"high\"\n\n  END IF\n\n  IF is_new_device_for_user(username, device_fingerprint) \nTHEN\n    RETURN \"high\"\n\n  END IF\n  \n  // 3. If no high-risk signals are found, return \"low\"\n\n  RETURN \"low\"\n\nEND FUNCTION",
+					"comment": "// ---  Risk-Scoring Protocol---\n\nCONST RISK_THRESHOLD = 100\n\nFUNCTION analyze(username, request_context):\n  \n  risk_score = 0\n  \n  // 1. Check IP Reputation (High Impact)\n  IF is_ip_blacklisted(request_context.ip_address) \nTHEN\n    risk_score += 90\n  END IF\n\n  // 2. Check for New Device (High Impact)\n  IF is_new_device_for_user(username, request_context.device_fingerprint) THEN\n    risk_score += 75\n  END IF\n  \n  // 3. Check for Impossible Travel (Critical Impact)\n  IF is_impossible_travel(username, request_context.location) \nTHEN\n    risk_score += 150\n  END IF\n  \n  // 4. Check for Atypical Login Time (Medium Impact)\n  IF is_atypical_login_time(username, request_context.timestamp) \nTHEN\n    risk_score += 30\n  END IF\n  \n  // 5. Final Decision\n  IF risk_score >= RISK_THRESHOLD \nTHEN\n    RETURN \"high\"\n\n  ELSE\n    RETURN \"low\"\n  END IF",
 					"asssignedVariableName": "flow_riskLevel"
 				}
 			},
