@@ -2,4 +2,4 @@ Flow com.me.adaptiveAuthentication
      Basepath ""
 flow_userLogin = RRF "auth/userLogin.html" 
 flow_riskLevel = Call com.Relock.risk.RiskChecker#analyze flow_userLogin
-When flow_riskLevel is "High"
+When flow_riskLevel is high
