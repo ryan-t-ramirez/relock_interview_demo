@@ -8,3 +8,5 @@ When flow_userLogin is highRisk
 Otherwise
      flow_password = RRF "auth/password.html" 
      flow_authResult = Call com.Relock.auth.Authenticator#verifyPassword flow_userLogin flow_password
+     it_cerxm = {success:true, data: { userId: flow_userLogin }}
+     Finish it_cerxm
