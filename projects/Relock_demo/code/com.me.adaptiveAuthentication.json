@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -185,40 +185,6 @@
 			"dragging": false
 		},
 		{
-			"id": "finishNode-98fbf678-f783-452e-bad1-224eb12f1635",
-			"type": "finishNode",
-			"position": {
-				"x": 1280.329467172937,
-				"y": 292.16473358646846
-			},
-			"data": {
-				"id": "finishNode-98fbf678-f783-452e-bad1-224eb12f1635",
-				"type": "finishNode",
-				"position": {
-					"x": 1280.329467172937,
-					"y": 292.16473358646846
-				},
-				"previousNodeId": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1",
-				"agamaData": {
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "Login Successful",
-					"hasComment": true,
-					"comment": "",
-					"flowfilename": "",
-					"returnVariable": "{ userId: flow_userLogin }",
-					"finishMode": "withSuccess",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			},
-			"selected": false
-		},
-		{
 			"id": "rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62",
 			"type": "rrfNode",
 			"position": {
@@ -254,38 +220,45 @@
 			"selected": false
 		},
 		{
-			"id": "finishNode-431a5eaf-d5ec-4db6-8972-4a8f007fdf81",
-			"type": "finishNode",
+			"id": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
+			"type": "callNode",
 			"position": {
 				"x": 1028,
 				"y": -159
 			},
 			"data": {
-				"id": "finishNode-431a5eaf-d5ec-4db6-8972-4a8f007fdf81",
-				"type": "finishNode",
+				"id": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
+				"type": "callNode",
 				"position": {
 					"x": 1028,
 					"y": -159
 				},
 				"previousNodeId": "rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62",
 				"agamaData": {
+					"javaClassName": "com.Relock.auth.Authenticator",
+					"javaMethodName": "verifyPassword",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [
+						"flow_userLogin",
+						"flow_password"
+					],
+					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "Login Successful (Low Risk)",
+					"displayName": "Verify Credentials",
 					"hasComment": true,
 					"comment": "",
-					"flowfilename": "",
-					"returnVariable": "{ userId: flow_userLogin }",
-					"finishMode": "withSuccess",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
+					"asssignedVariableName": "flow_authResult"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -366,25 +339,6 @@
 			"sourceHandle": "source_rrfNode-d3a5a423-37d5-441b-bf2b-8c31d99e3e12"
 		},
 		{
-			"id": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1-finishNode-98fbf678-f783-452e-bad1-224eb12f1635",
-			"type": "default",
-			"source": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1",
-			"target": "finishNode-98fbf678-f783-452e-bad1-224eb12f1635",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1"
-		},
-		{
 			"id": "whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c-rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62",
 			"type": "default",
 			"source": "whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c",
@@ -404,10 +358,10 @@
 			"sourceHandle": "source_whenNode-a20b2841-4e4c-4cd4-9fba-e73611e7281c_otherwise"
 		},
 		{
-			"id": "rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62-finishNode-431a5eaf-d5ec-4db6-8972-4a8f007fdf81",
+			"id": "rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62-callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
 			"type": "default",
 			"source": "rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62",
-			"target": "finishNode-431a5eaf-d5ec-4db6-8972-4a8f007fdf81",
+			"target": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
 			"labelBgPadding": [
 				8,
 				4
@@ -424,8 +378,8 @@
 		}
 	],
 	"viewport": {
-		"x": 86.18273236879395,
-		"y": 221.31854113528323,
-		"zoom": 0.6993080413692337
+		"x": 56.629241139455985,
+		"y": 250.6805679410458,
+		"zoom": 0.6993080413692345
 	}
 }
