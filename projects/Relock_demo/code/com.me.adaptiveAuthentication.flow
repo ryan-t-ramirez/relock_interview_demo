@@ -5,9 +5,6 @@ flow_userLogin = RRF "auth/userLogin.html"
 When flow_userLogin is highRisk
      flow_password = RRF "auth/password.html" 
      flow_otp = RRF "auth/otp.html" 
-     it_qanen = {success:true, data: { userId: flow_userLogin }}
-     Finish it_qanen
 Otherwise
      flow_password = RRF "auth/password.html" 
-     it_wiwii = {success:true, data: { userId: flow_userLogin }}
-     Finish it_wiwii
+     flow_authResult = Call com.Relock.auth.Authenticator#verifyPassword flow_userLogin flow_password
