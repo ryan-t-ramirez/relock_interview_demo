@@ -36,10 +36,10 @@ When flow_riskLevel is high
      flow_password = RRF "auth/password.html" 
      flow_otp = RRF "auth/otp.html" 
      flow_authResult = Call com.Relock.auth.Authenticator#verifyPasswordAndOTP flow_userLogin flow_password flow_otp
-     it_rgafb = {success:true, data: { userId: flow_userLogin }}
-     Finish it_rgafb
+     it_jpzfy = {success:true, data: { userId: flow_userLogin }}
+     Finish it_jpzfy
 Otherwise
      flow_password = RRF "auth/password.html" 
      flow_authResult = Call com.Relock.auth.Authenticator#verifyPassword flow_userLogin flow_password
-     it_lvhmo = {success:true, data: { userId: flow_userLogin }}
-     Finish it_lvhmo
+     it_iiytm = {success:true, data: { userId: flow_userLogin }}
+     Finish it_iiytm
