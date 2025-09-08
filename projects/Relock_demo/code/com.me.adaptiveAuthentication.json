@@ -360,7 +360,7 @@
 					"descColor": "",
 					"displayName": "Assess Login Risk",
 					"hasComment": true,
-					"comment": "// ---  Risk-Scoring Protocol---\n\nCONST RISK_THRESHOLD = 100\n\nFUNCTION analyze(username, request_context):\n  \n  risk_score = 0\n  \n  // 1. Check IP Reputation (High Impact)\n  IF is_ip_blacklisted(request_context.ip_address) \nTHEN\n    risk_score += 90\n  END IF\n\n  // 2. Check for New Device (High Impact)\n  IF is_new_device_for_user(username, request_context.device_fingerprint) THEN\n    risk_score += 75\n  END IF\n  \n  // 3. Check for Impossible Travel (Critical Impact)\n  IF is_impossible_travel(username, request_context.location) \nTHEN\n    risk_score += 150\n  END IF\n  \n  // 4. Check for Atypical Login Time (Medium Impact)\n  IF is_atypical_login_time(username, request_context.timestamp) \nTHEN\n    risk_score += 30\n  END IF\n  \n  // 5. Final Decision\n  IF risk_score >= RISK_THRESHOLD \nTHEN\n    RETURN \"high\"\n\n  ELSE\n    RETURN \"low\"\n  END IF",
+					"comment": "// ---  Risk-Scoring Protocol---\n\nCONST RISK_THRESHOLD = 100\n\nFUNCTION analyze(username, request_context):\n  \n  risk_score = 0\n  \n  // 1. Check IP Reputation (High Impact)\n\n  IF is_ip_blacklisted(request_context.ip_address) \nTHEN\n    risk_score += 90\n  END IF\n\n  // 2. Check for New Device (High Impact)\n\n  IF is_new_device_for_user(username, request_context.device_fingerprint) THEN\n    risk_score += 75\n  END IF\n  \n  // 3. Check for Impossible Travel (Critical Impact)\n\n  IF is_impossible_travel(username, request_context.location) \nTHEN\n    risk_score += 150\n  END IF\n  \n  // 4. Check for Atypical Login Time (Medium Impact)\n\n  IF is_atypical_login_time(username, request_context.timestamp) \nTHEN\n    risk_score += 30\n  END IF\n  \n  // 5. Decision\n\n  IF risk_score >= RISK_THRESHOLD \nTHEN\n    RETURN \"high\"\n\n  ELSE\n    RETURN \"low\"\n  END IF",
 					"asssignedVariableName": "flow_riskLevel"
 				}
 			},
@@ -368,7 +368,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-4f75bdf7-db02-4c65-a04d-f3336223ac4c",
@@ -605,8 +605,8 @@
 		}
 	],
 	"viewport": {
-		"x": 173.10707583604506,
-		"y": 208.75669232326936,
+		"x": 191.10707583604506,
+		"y": 166.75669232326936,
 		"zoom": 0.6722335285165116
 	}
 }
