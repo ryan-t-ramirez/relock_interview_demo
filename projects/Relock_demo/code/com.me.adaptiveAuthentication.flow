@@ -5,5 +5,9 @@ flow_userLogin = RRF "auth/userLogin.html"
 When flow_userLogin is highRisk
      flow_password = RRF "auth/password.html" 
      flow_otp = RRF "auth/otp.html" 
-     it_sbodd = {success:true, data: { userId: flow_userLogin }}
-     Finish it_sbodd
+     it_kuvsr = {success:true, data: { userId: flow_userLogin }}
+     Finish it_kuvsr
+Otherwise
+     flow_password = RRF "auth/password.html" 
+     it_jrzhn = {success:true, data: { userId: flow_userLogin }}
+     Finish it_jrzhn
