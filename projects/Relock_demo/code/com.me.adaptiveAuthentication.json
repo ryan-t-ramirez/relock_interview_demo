@@ -258,6 +258,40 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "finishNode-5ed92952-e1ba-4201-8d98-7001b3d3f09a",
+			"type": "finishNode",
+			"position": {
+				"x": 1278,
+				"y": -159
+			},
+			"data": {
+				"id": "finishNode-5ed92952-e1ba-4201-8d98-7001b3d3f09a",
+				"type": "finishNode",
+				"position": {
+					"x": 1278,
+					"y": -159
+				},
+				"previousNodeId": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Login Successful (Low Risk)",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: flow_userLogin }",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -375,6 +409,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-008e6f5a-6c11-4c7f-b631-185783c7cc62"
+		},
+		{
+			"id": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295-finishNode-5ed92952-e1ba-4201-8d98-7001b3d3f09a",
+			"type": "default",
+			"source": "callNode-b1bad61e-99f8-4faa-8067-0859a85c1295",
+			"target": "finishNode-5ed92952-e1ba-4201-8d98-7001b3d3f09a",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-b1bad61e-99f8-4faa-8067-0859a85c1295"
 		}
 	],
 	"viewport": {
