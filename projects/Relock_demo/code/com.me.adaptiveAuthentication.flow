@@ -1,15 +1,32 @@
 Flow com.me.adaptiveAuthentication
      Basepath ""
 flow_userLogin = RRF "auth/userLogin.html" 
+// // --- Risk Assessment ---
+// FUNCTION analyze(username):
+//   // 1. Get data from the user's request
+//   ip_address = get_request_ip()
+//   device_fingerprint = get_device_fingerprint()
+//   // 2. Check for high-risk signals
+//   IF is_ip_on_blacklist(ip_address) 
+// THEN
+//     RETURN "high"
+//   END IF
+//   IF is_new_device_for_user(username, device_fingerprint) 
+// THEN
+//     RETURN "high"
+//   END IF
+//   // 3. If no high-risk signals are found, return "low"
+//   RETURN "low"
+// END FUNCTION
 flow_riskLevel = Call com.Relock.risk.RiskChecker#analyze flow_userLogin
 When flow_riskLevel is high
      flow_password = RRF "auth/password.html" 
      flow_otp = RRF "auth/otp.html" 
      flow_authResult = Call com.Relock.auth.Authenticator#verifyPasswordAndOTP flow_userLogin flow_password flow_otp
-     it_joekm = {success:true, data: { userId: flow_userLogin }}
-     Finish it_joekm
+     it_nspeo = {success:true, data: { userId: flow_userLogin }}
+     Finish it_nspeo
 Otherwise
      flow_password = RRF "auth/password.html" 
      flow_authResult = Call com.Relock.auth.Authenticator#verifyPassword flow_userLogin flow_password
-     it_kloag = {success:true, data: { userId: flow_userLogin }}
-     Finish it_kloag
+     it_glaom = {success:true, data: { userId: flow_userLogin }}
+     Finish it_glaom
