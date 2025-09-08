@@ -292,6 +292,82 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-81422a28-c879-4517-81ac-7c491191f993",
+			"type": "callNode",
+			"position": {
+				"x": 1280.329467172937,
+				"y": 292.16473358646846
+			},
+			"data": {
+				"id": "callNode-81422a28-c879-4517-81ac-7c491191f993",
+				"type": "callNode",
+				"position": {
+					"x": 1280.329467172937,
+					"y": 292.16473358646846
+				},
+				"previousNodeId": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1",
+				"agamaData": {
+					"javaClassName": "com.Relock.auth.Authenticator",
+					"javaMethodName": "verifyPasswordAndOTP",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [
+						"flow_userLogin",
+						"flow_password",
+						"flow_otp"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Verify Credentials (High Risk)",
+					"hasComment": true,
+					"comment": "",
+					"asssignedVariableName": "flow_authResult"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "finishNode-6eb945d2-7d02-4eeb-a3cd-0dc4d77b3b49",
+			"type": "finishNode",
+			"position": {
+				"x": 1530.329467172937,
+				"y": 292.16473358646846
+			},
+			"data": {
+				"id": "finishNode-6eb945d2-7d02-4eeb-a3cd-0dc4d77b3b49",
+				"type": "finishNode",
+				"position": {
+					"x": 1530.329467172937,
+					"y": 292.16473358646846
+				},
+				"previousNodeId": "callNode-81422a28-c879-4517-81ac-7c491191f993",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Login Successful",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: flow_userLogin }",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -428,11 +504,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-b1bad61e-99f8-4faa-8067-0859a85c1295"
+		},
+		{
+			"id": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1-callNode-81422a28-c879-4517-81ac-7c491191f993",
+			"type": "default",
+			"source": "rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1",
+			"target": "callNode-81422a28-c879-4517-81ac-7c491191f993",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-f62babf7-b6db-41db-992d-3e47a96418a1"
+		},
+		{
+			"id": "callNode-81422a28-c879-4517-81ac-7c491191f993-finishNode-6eb945d2-7d02-4eeb-a3cd-0dc4d77b3b49",
+			"type": "default",
+			"source": "callNode-81422a28-c879-4517-81ac-7c491191f993",
+			"target": "finishNode-6eb945d2-7d02-4eeb-a3cd-0dc4d77b3b49",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-81422a28-c879-4517-81ac-7c491191f993"
 		}
 	],
 	"viewport": {
-		"x": 56.629241139455985,
-		"y": 250.6805679410458,
-		"zoom": 0.6993080413692345
+		"x": -130.37075886054538,
+		"y": 234.68056794104578,
+		"zoom": 0.6993080413692356
 	}
 }
