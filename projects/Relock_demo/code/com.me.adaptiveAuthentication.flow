@@ -3,3 +3,4 @@ Flow com.me.adaptiveAuthentication
 flow_userLogin = RRF "auth/userLogin.html" 
 // Checks if the user login is high risk. 
 When flow_userLogin is highRisk
+     flow_password = RRF "auth/password.html" 
