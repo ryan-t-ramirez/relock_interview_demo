@@ -370,14 +370,14 @@
 			"selected": false
 		},
 		{
-			"id": "whenNode-5d740652-6ed8-4955-ad60-1d05e99955c3",
+			"id": "whenNode-4f75bdf7-db02-4c65-a04d-f3336223ac4c",
 			"type": "whenNode",
 			"position": {
-				"x": 381.60599533284784,
-				"y": 86.63202198713883
+				"x": 448.21766002898084,
+				"y": 92.72401649035412
 			},
 			"data": {
-				"id": "whenNode-5d740652-6ed8-4955-ad60-1d05e99955c3",
+				"id": "whenNode-4f75bdf7-db02-4c65-a04d-f3336223ac4c",
 				"type": "whenNode",
 				"position": {
 					"x": 448.21766002898084,
@@ -392,7 +392,7 @@
 						{
 							"variable": "flow_riskLevel",
 							"operator": "is",
-							"dataValue": "High",
+							"dataValue": "\"High\"",
 							"combinator": "none"
 						}
 					],
@@ -548,10 +548,10 @@
 			"sourceHandle": "source_rrfNode-28a3fb53-4498-443e-94b7-c484f88dde0d"
 		},
 		{
-			"id": "callNode-92d37a37-31fb-4117-8247-32d61d059027-whenNode-5d740652-6ed8-4955-ad60-1d05e99955c3",
+			"id": "callNode-92d37a37-31fb-4117-8247-32d61d059027-whenNode-4f75bdf7-db02-4c65-a04d-f3336223ac4c",
 			"type": "default",
 			"source": "callNode-92d37a37-31fb-4117-8247-32d61d059027",
-			"target": "whenNode-5d740652-6ed8-4955-ad60-1d05e99955c3",
+			"target": "whenNode-4f75bdf7-db02-4c65-a04d-f3336223ac4c",
 			"labelBgPadding": [
 				8,
 				4
@@ -569,7 +569,7 @@
 	],
 	"viewport": {
 		"x": 130.16827260755394,
-		"y": 206.32901377915726,
+		"y": 207.32901377915726,
 		"zoom": 0.7135242690016365
 	}
 }
