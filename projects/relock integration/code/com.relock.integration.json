@@ -1,36 +1,271 @@
 {
-  "nodes": [
-    {
-      "id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
-      "type": "startNode",
-      "sourcePosition": "right",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "deletable": false,
-      "data": {
-        "id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
-        "type": "startNode",
-        "position": {
-          "x": 30,
-          "y": 40
-        },
-        "agamaData": {
-          "isTopLevelFlow": true,
-          "basepath": "",
-          "configParams": "{}",
-          "nodeIcon": "material-symbols:line-start-square",
-          "timeout": "",
-          "inputs": "",
-          "configs": "",
-          "flowname": "com.relock.integration",
-          "displayName": "relock integration",
-          "creationDate": "10/09/2025",
-          "hasComment": true,
-          "comment": ""
-        }
-      }
-    }
-  ]
+	"nodes": [
+		{
+			"id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+			"type": "startNode",
+			"sourcePosition": "right",
+			"position": {
+				"x": 30,
+				"y": 30
+			},
+			"deletable": false,
+			"data": {
+				"id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+				"type": "startNode",
+				"position": {
+					"x": 30,
+					"y": 40
+				},
+				"agamaData": {
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{}",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "",
+					"configs": "",
+					"flowname": "com.relock.integration",
+					"displayName": "User Initiates Login",
+					"creationDate": "10/09/2025",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+			"type": "rfacNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+				"type": "rfacNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+				"agamaData": {
+					"nodeIcon": "ic:baseline-insert-link",
+					"idpAuthEndpoint": "https://www.relock.security/",
+					"assignCallbackResult": "result",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Redirect to Relock ",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+			"type": "whenNode",
+			"position": {
+				"x": 530,
+				"y": 88
+			},
+			"data": {
+				"id": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+				"type": "whenNode",
+				"position": {
+					"x": 530,
+					"y": 88
+				},
+				"previousNodeId": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "relock_result.deviceStatus",
+							"operator": "is",
+							"dataValue": "trusted",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false
+		},
+		{
+			"id": "finishNode-3f2a76e1-0053-405a-ab84-29376cb6966b",
+			"type": "finishNode",
+			"position": {
+				"x": 689.9776399144058,
+				"y": -162
+			},
+			"data": {
+				"id": "finishNode-3f2a76e1-0053-405a-ab84-29376cb6966b",
+				"type": "finishNode",
+				"position": {
+					"x": 780,
+					"y": -162
+				},
+				"previousNodeId": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+				"branching": "otherwise",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Reroute to Low-Risk Flow",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: \"as9233Qz\", property1: \"value1\"}",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "finishNode-7043920d-6c72-4aa8-8f6c-b783a5ed95c6",
+			"type": "finishNode",
+			"position": {
+				"x": 686.412397930818,
+				"y": 266.6085480984726
+			},
+			"data": {
+				"id": "finishNode-7043920d-6c72-4aa8-8f6c-b783a5ed95c6",
+				"type": "finishNode",
+				"position": {
+					"x": 780,
+					"y": 288
+				},
+				"previousNodeId": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+				"branching": "success",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Reroute to High-Risk Flow",
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{ userId: \"as9233Qz\", property1: \"value1\"}",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
+		}
+	],
+	"edges": [
+		{
+			"id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b-rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+			"type": "default",
+			"source": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+			"target": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b"
+		},
+		{
+			"id": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e-whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+			"type": "default",
+			"source": "rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e",
+			"target": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rfacNode-b8ad1c7d-47b1-4a3f-92ef-000ff7d1689e"
+		},
+		{
+			"id": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c-finishNode-3f2a76e1-0053-405a-ab84-29376cb6966b",
+			"type": "default",
+			"source": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+			"target": "finishNode-3f2a76e1-0053-405a-ab84-29376cb6966b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-0f87295a-0b98-41f8-9640-9565289c190c_otherwise"
+		},
+		{
+			"id": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c-finishNode-7043920d-6c72-4aa8-8f6c-b783a5ed95c6",
+			"type": "default",
+			"source": "whenNode-0f87295a-0b98-41f8-9640-9565289c190c",
+			"target": "finishNode-7043920d-6c72-4aa8-8f6c-b783a5ed95c6",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-0f87295a-0b98-41f8-9640-9565289c190c_success"
+		}
+	],
+	"viewport": {
+		"x": -70.89903912783745,
+		"y": 107.08421585556349,
+		"zoom": 1.1550857845535827
+	}
 }
