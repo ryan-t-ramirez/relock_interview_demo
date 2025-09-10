@@ -2,8 +2,8 @@ Flow com.relock.integration
      Basepath ""
 result = RFAC https://www.relock.security/
 When relock_result.deviceStatus is trusted
-     it_bahfk = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_bahfk
+     it_jhdeu = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_jhdeu
 Otherwise
-     it_twlvq = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_twlvq
+     it_qnbzj = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_qnbzj
