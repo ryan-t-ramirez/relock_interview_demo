@@ -33,6 +33,9 @@
             "openid-connect"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "com.relock.integration": {}
+        },
+        "name": "relock integration"
     }
 }
