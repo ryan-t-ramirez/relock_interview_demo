@@ -2,8 +2,8 @@ Flow com.relock.integration
      Basepath ""
 result = RFAC obj.twitter.login.url
 When relock_result.deviceStatus is trusted
-     it_nbnph = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_nbnph
+     it_jopvg = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_jopvg
 Otherwise
-     it_idzna = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_idzna
+     it_edyys = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_edyys
