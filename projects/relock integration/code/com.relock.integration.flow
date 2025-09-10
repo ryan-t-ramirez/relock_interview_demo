@@ -1,9 +1,9 @@
 Flow com.relock.integration
      Basepath ""
-result = RFAC https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgoogle%2Blogin%26oq%3Dgoogle%2Blogin%26gs_lcrp%3DEgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyBggCEEUYPDIGCAMQRRg80gEIMTkxOGowajGoAgCwAgA%26sourceid%3Dchrome%26ie%3DUTF-8%26sei%3DSu7BaOrHIOfWptQP9JbvqQU&ec=futura_srp_og_si_72236_p&hl=en&ifkv=AfYwgwXLvKQRlWMCRWU6qjxVmZpe-n502anUHHsiMlhIrplzOTR7rU3GRpUzesYyzRoH1fj8lUO5&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-301197970%3A1757539916128619
+result = RFAC obj.twitter.login.url
 When relock_result.deviceStatus is trusted
-     it_fznio = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_fznio
+     it_nbnph = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_nbnph
 Otherwise
-     it_oecmw = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
-     Finish it_oecmw
+     it_idzna = {success:true, data: { userId: "as9233Qz", property1: "value1"}}
+     Finish it_idzna
