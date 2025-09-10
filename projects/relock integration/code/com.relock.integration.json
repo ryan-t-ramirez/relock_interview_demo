@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+      "type": "startNode",
+      "sourcePosition": "right",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "deletable": false,
+      "data": {
+        "id": "startNode-cbbee539-cf21-4136-82e5-68fa2c530d1b",
+        "type": "startNode",
+        "position": {
+          "x": 30,
+          "y": 40
+        },
+        "agamaData": {
+          "isTopLevelFlow": true,
+          "basepath": "",
+          "configParams": "{}",
+          "nodeIcon": "material-symbols:line-start-square",
+          "timeout": "",
+          "inputs": "",
+          "configs": "",
+          "flowname": "com.relock.integration",
+          "displayName": "relock integration",
+          "creationDate": "10/09/2025",
+          "hasComment": true,
+          "comment": ""
+        }
+      }
+    }
+  ]
+}
